@@ -1,0 +1,12 @@
+{
+  "name": "pelican-cid",
+  "version": "0.0.0",
+  "description": "A Simple Pelican theme",
+  "author": "Hendra",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "~3.8.1",
+    "gulp-autoprefixer": "0.0.7",
+    "gulp-ruby-sass": "~0.5.0"
+  }
+}
