@@ -1,3 +1,7 @@
+@import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic)
+
+$break-small: 640px
+
 $text-color: #030303
 $bg-color: #fefefe
 
@@ -6,6 +10,39 @@ $bg-color: #fefefe
     color: $text-color
 
 .landing-container
+    width: 65%
+    margin: 2em auto 0
+    font-family: 'Georgia', serif
+
+    h1, li
+        font-family: 'Gentium Book Basic', 'Georgia', serif
+
+    @media screen and (max-width: $break-small)
+        width: 100%
+        margin: 1em 0
+
+    header
+        font-size: 1.2em
+        h1
+            font-size: 4em
+            margin: 0.4em 0
 
     ul
+        margin-top: 5em
+        margin-bottom: 3em
         list-style: none
+        text-align: center
+
+
+        li
+            display: inline
+            font-size: 2em
+            margin-right: 2%
+            @media screen and (max-width: $break-small)
+                display: block
+                margin-right: 0
+
+    footer
+        text-align: center
+        font-size: 0.7em
+        font-style: italic
