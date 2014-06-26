@@ -17,7 +17,7 @@ function startExpress() {
 
 gulp.task('default', function(){
 
-    util.log('Starting express server.');
+    util.log('Starting express server on port '.EXPRESS_ROOT);
     startExpress();
 
     // Watch HTML files
