@@ -5,17 +5,23 @@ $break-small: 640px
 $text-color: #030303
 $bg-color: #fefefe
 
+$header-font: 'Gentium Book Basic', 'Georgia', serif
+$body-font: 'Georgia', serif
+
 *
     background-color: $bg-color
     color: $text-color
 
+h1, h2, h3, h4
+    font-family: $header-font
+
 .landing-container
     width: 65%
     margin: 2em auto 0
-    font-family: 'Georgia', serif
+    font-family: $body-font
 
-    h1, li
-        font-family: 'Gentium Book Basic', 'Georgia', serif
+    li
+        font-family: $header-font
 
     @media screen and (max-width: $break-small)
         width: 100%
@@ -46,3 +52,12 @@ $bg-color: #fefefe
         text-align: center
         font-size: 0.7em
         font-style: italic
+
+
+.container
+    width: 45em
+    margin: 1em auto
+
+    .blog-header
+        h1
+            margin: 0.6em 0
