@@ -15,6 +15,18 @@ $body-font: 'Georgia', serif
 h1, h2, h3, h4
     font-family: $header-font
 
+
+.disclaimer
+    text-align: center
+    font-size: 0.8em
+
+.nav
+    list-style: none
+    padding-left: 0
+    li
+        display: inline-block
+        margin-right: 0.56em
+
 .landing-container
     width: 65%
     margin: 2em auto 0
@@ -36,23 +48,13 @@ h1, h2, h3, h4
     ul
         margin-top: 5em
         margin-bottom: 3em
-        list-style: none
         text-align: center
 
-
         li
-            display: inline
             font-size: 2em
-            margin-right: 2%
             @media screen and (max-width: $break-small)
                 display: block
                 margin-right: 0
-
-    footer
-        text-align: center
-        font-size: 0.7em
-        font-style: italic
-
 
 .container
     width: 45em
@@ -65,8 +67,12 @@ h1, h2, h3, h4
         p
             margin-top: 0.2em
 
+    .nav
+        font-size: 1.2em
+
     .post-list
         .post-overview
+            margin: 1em
             position: relative
             padding-left: 7em
 
@@ -74,3 +80,7 @@ h1, h2, h3, h4
                 position: absolute
                 left: 0em
                 top: 0.2em
+
+    .blog-footer
+        margin-top: 2em
+        text-align: center
