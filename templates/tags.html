@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+        <h1>Tags</h1>
+
+        <div class="post-list">
+
+            {% for (tag, articles) in tags %}
+
+            <article class="post-list">
+                <a href="{{ SITEURL }}/{{ tag.url }}"><h2>{{ tag }} ( {{ articles|count }} articles)</h2></a>
+            </article>
+
+            {% endfor %}
+
+        </div>
+
+{% endblock content %}

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+        <h1>Tag: {{ category }}</h1>
+
+        <div class="post-list">
+
+            {% for article in articles_page.object_list %}
+
+            <article class="post-overview">
+                <a href="{{ SITEURL }}/{{ article.url }}"><h2>{{ article.title }}</h2></a>
+                <time datetime="{{ article.date.isoformat() }}">{{ article.date.strftime('%b %d, %Y') }}</time>
+                <p class="excerpt">
+                    {{ article.summary }}
+                </p>
+                <footer>
+                    Posted In: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>.
+                </footer>
+            </article>
+
+            {% endfor %}
+
+        </div>
+
+        {% if DEFAULT_PAGINATION %}
+        <div class="paginator">
+            {% if articles_page.has_previous() %}
+                {% if articles_page.previous_page_number() == 1 %}
+                    <a href="{{ SITEURL }}/{{ page_name }}.html">&lt;&lt;&lt;</a>
+                {% else %}
+                    <a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.previous_page_number() }}.html">
+                        &lt;&lt;&lt;
+                    </a>
+                {% endif %}
+            {% endif %}
+            Page {{ articles_page.number }} / {{ articles_paginator.num_pages }}
+            {% if articles_page.has_next() %}
+                <a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.next_page_number() }}.html">
+                    &gt;&gt;&gt;
+                </a>
+            {% endif %}
+        </div>
+        {% endif %}
+
+
+{% endblock content %}

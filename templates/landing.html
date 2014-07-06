@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block container %}
+
+        <div class="landing-container">
+            <header>
+                <h1 class="landing-header">{{ SITENAME }}</h1>
+                <p>{% if SITESUBTITLE %} {{ SITESUBTITLE }} {% endif %}</p>
+            </header>
+            <ul class="nav">
+                {% if USE_CUSTOM_MENU %}
+                    {% for name, url in CUSTOM_MENUITEMS %}
+                        <li><a href="{{ SITEURL }}/{{ url }}">{{ name }}</a></li>
+                    {% endfor %}
+                {% else %}
+                    {% for page in PAGES %}
+                        <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+                    {% endfor %}
+                {% endif %}
+                {% for title,url in CONTACTS %}
+                    <li><a href="{{ url }}">{{ title|capitalize }}</h3>
+                    </a></li>
+                {% endfor %}
+                {% if CONTACT_EMAIL %}
+                    <li><a href="mailto:{{ CONTACT_EMAIL }}">Email</a></li>
+                {% endif %}
+            </ul>
+            <footer>
+                <p class="disclaimer">Hendra &copy; 2014. Contents is <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/us/">cc by-nc-sa</a>. All opinions are of my own.</p>
+            </footer>
+        </div>
+
+{% endblock container %}
