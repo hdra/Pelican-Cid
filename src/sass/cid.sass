@@ -6,16 +6,22 @@ $break-small: 640px
 
 $text-color: #030303
 $bg-color: #fefefe
+$code-color: #c7254e
+$code-bg-color: #f9f2f4
 
 $header-font: 'Gentium Book Basic', 'Georgia', serif
 $body-font: 'Merriweather', 'Georgia', serif
+$monospace-font: 'Menlo', 'Monaco', 'Consolas', 'Courier New', monospace
 
 *
     background-color: $bg-color
     color: $text-color
 
-h1, h2, h3, h4
+h1, h2, h3, h4, h5, h6
     font-family: $header-font
+
+code, kbd, pre, samp
+    font-family: $monospace-font
 
 body
     font-family: $body-font
@@ -125,6 +131,13 @@ body
             font-size: 1.18em
         a
             font-weight: 400
+
+        code
+            padding: 2px 4px
+            font-size: 90%
+            color: $code-color
+            background-color: $code-bg-color
+            border-radius: 4px
 
         blockquote
             font-style: italic
