@@ -10,7 +10,7 @@
             {% for (category, articles) in categories %}
 
             <article class="post-list">
-                <a href="{{ SITEURL }}/{{ category.url }}"><h2>{{ category }} ( {{ articles|count }} articles)</h2></a>
+                <h2><a href="{{ SITEURL }}/{{ category.url }}">{{ category }} ( {{ articles|count }} articles)</a></h2>
             </article>
 
             {% endfor %}

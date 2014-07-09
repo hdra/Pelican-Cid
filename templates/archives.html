@@ -10,7 +10,7 @@
             {% for article in dates %}
 
             <article class="post-overview">
-                <a href="{{ SITEURL }}/{{ article.url }}"><h2>{{ article.title }}</h2></a>
+                <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
                 <time datetime="{{ article.date.isoformat() }}">{{ article.date.strftime('%b %d, %Y') }}</time>
             </article>
 
