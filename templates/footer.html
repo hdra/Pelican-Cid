@@ -19,5 +19,11 @@
         {% endif %}
     </ul>
 
-    <p class="disclaimer">Hendra &copy; 2014. Contents is <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/us/">cc by-nc-sa</a>. All opinions are of my own.</p>
+    <p class="disclaimer">
+    {% if SITEFOOTER %}
+        {{ SITEFOOTER }}
+    {% else %}
+    Built with <a href="http://getpelican.com">Pelican</a>, and <a href="https://github.com/hdra/Pelican-Cid">Cid</a> theme.
+    {% endif %}
+    </p>
 </footer>
