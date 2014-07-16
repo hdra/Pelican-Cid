@@ -99,7 +99,12 @@ body
             position: absolute
             top: 0
             right: 0
+            margin: 0 2px
             font-family: $header-font
+
+            @media screen and (max-width: $break-small)
+                position: relative
+                text-align: center
 
     .nav
         font-size: 1.2em
