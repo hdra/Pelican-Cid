@@ -1,0 +1,8 @@
+{% if CONTACT_EMAIL %}
+    {% set plaintext = '<li><a href=\\"mailto:{0}\\" rel=\\"nofollow\\">Email</a></li>'.format( CONTACT_EMAIL ) %}
+    {% set rot13 = plaintext.encode('rot13') %}
+    <script type="text/javascript">
+        // JS ROT13 by http://techblog.tilllate.com/2008/07/20/ten-methods-to-obfuscate-e-mail-addresses-compared/
+        document.write( "{{ rot13 }}".replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
+    </script>
+{% endif %}

@@ -14,9 +14,7 @@
             <li><a href="{{ url }}">{{ title|capitalize }}</h3>
             </a></li>
         {% endfor %}
-        {% if CONTACT_EMAIL %}
-            <li><a href="mailto:{{ CONTACT_EMAIL }}">Email</a></li>
-        {% endif %}
+        {% include 'email.html' %}
     </ul>
 
     <p class="disclaimer">
