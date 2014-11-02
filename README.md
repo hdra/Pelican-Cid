@@ -11,7 +11,7 @@ Cid is a simple theme for static site generator, [Pelican][pelican]
 * Pagination.
 
 ## Screenshots
-![Screenshot][scrshot]
+See in the `scrshot/` directory.
 
 ## Landing Page Template
 Cid includes a landing page template that can be used to generate a landing page for your site.
@@ -58,4 +58,3 @@ the design, the contents are no longer used and it is not kept updated to any de
 MIT
 
 [pelican]: http://getpelican.com
-[scrshot]: scrshot/Screen Shot 2014-11-02 at 7.51.08 PM.png
