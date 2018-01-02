@@ -39,6 +39,14 @@ If `CONTACT_EMAIL` is configured, the theme will display the email address in a 
 the email address will be printed through a Javascript ROT13 function in order to obfuscate the email addres.
 This means the email address won't be displayed if the site visitor doesn't have Javascript enabled.
 
+This feature requires a plugin that is included with the theme. These plugin needs to be enabled in order to
+use the theme.
+
+```
+PLUGIN_PATHS = ['./path/to/themes/pelican-cid/plugins']
+PLUGINS = ['cid_filters']
+```
+
 ## Contacts Links
 Additional contact information can be displayed in the same way as the custom menu item/ pages links. To use it,
 define a `CONTACTS` tuple in the configuration file.
