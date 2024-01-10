@@ -1,6 +1,6 @@
 # Cid
 
-Cid is a simple theme for static site generator, [Pelican][pelican]. Demo: [my site](http://hndr.me).
+Cid is a simple theme for static site generator, [Pelican][pelican]. 
 
 ## Features summary:
 * Disqus comment. `DISQUS_SITENAME` must be defined in configuration file.
